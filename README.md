@@ -14,6 +14,12 @@ that one can use it solely to manage everything in an Erlang project.
 Whether it is bringing Docker containers up, tagging a new Git release or
 deleting log files, you should be able to use a single build tool.
 
+Note about the fork: this project differs from the original in a few minor ways:
+
+* No uncessary, old, or broken deps
+* Latest version of Erlang is supported in CI/CD
+* More explicit project name (mostly just to avoid confusion in Hex.pm)
+
 ## How it works
 
 This is a very simple and straightforward plugin. Simply describe your
