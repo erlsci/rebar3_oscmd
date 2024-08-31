@@ -65,7 +65,7 @@ $ rebar3 oscmd sync
 [logo-large]: priv/images/logo-large.png
 [gh-actions-badge]: https://github.com/erlsci/rebar3_oscmd/workflows/ci%2Fcd/badge.svg
 [gh-actions]: https://github.com/erlsci/rebar3_oscmd/actions
-[erlang-badge]: https://img.shields.io/badge/erlang-21%20to%2025-blue.svg
+[erlang-badge]: https://img.shields.io/badge/erlang-22%20to%2027-blue.svg
 [versions]: https://github.com/erlsci/rebar3_oscmd/blob/main/rebar.config
 [github-tags]: https://github.com/erlsci/rebar3_oscmd/tags
 [github-tags-badge]: https://img.shields.io/github/tag/erlsci/rebar3_oscmd.svg

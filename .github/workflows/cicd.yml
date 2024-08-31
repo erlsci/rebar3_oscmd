@@ -14,11 +14,11 @@ jobs:
 
   builds:
     name: Erlang ${{ matrix.otp_version }} build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     strategy:
       matrix:
-        otp_version: ['22', '23', '24', '25', '26', '27']
+        otp_version: ['27', '26', '25', '24']
 
     steps:
     - uses: actions/checkout@v4
@@ -26,6 +26,27 @@ jobs:
       with:
         otp-version: ${{ matrix.otp_version }}
         rebar3-version: '3.22'
+    - name: Compile
+      run: rebar3 compile
+    - name: Xref Checks
+      run: rebar3 xref
+    - name: Run Common Tests
+      run: rebar3 ct -v
+
+  old-builds:
+    name: Erlang ${{ matrix.otp_version }} build
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        otp_version: ['23', '22', '21']
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: erlef/setup-beam@v1
+      with:
+        otp-version: ${{ matrix.otp_version }}
+        rebar3-version: '3.15'
     - name: Compile
       run: rebar3 compile
     - name: Xref Checks
