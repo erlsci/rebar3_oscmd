@@ -1,6 +1,10 @@
-# rebar3_oscmd [![Build Status](https://github.com/gootik/rebar_cmd/workflows/build/badge.svg)](https://github.com/gootik/rebar_cmd) [![Hex.pm](https://img.shields.io/hexpm/v/rebar_cmd.svg)](https://hex.pm/packages/rebar_cmd)
+[![Build Status][gh-actions-badge]][gh-actions]
+[![Erlang Versions][erlang-badge]][versions]
+[![Tags][github-tags-badge]][github-tags]
 
-Run custom shell commands with `rebar3 oscmd <command>`.
+# `rebar3_oscmd`
+
+*Run custom shell commands with `rebar3 oscmd <shell command>`*
 
 ## Purpose
 
@@ -14,7 +18,7 @@ deleting log files, you should be able to use a single build tool.
 
 This is a very simple and straightforward plugin. Simply describe your
 command in `rebar.config` and execute (just like you would Linux aliases)
-with `rebar3 oscmd <command>`.
+with `rebar3 oscmd <shell command>`.
 
 ## Usage
 
@@ -54,3 +58,14 @@ $ rebar3 oscmd sync
 ===> Compiling rebar3_oscmd
 ===> Command sync resulted in: "Already up to date."
 ```
+
+[//]: ---Named-Links---
+
+[logo]: priv/images/logo.png
+[logo-large]: priv/images/logo-large.png
+[gh-actions-badge]: https://github.com/erlsci/rebar3_oscmd/workflows/ci%2Fcd/badge.svg
+[gh-actions]: https://github.com/erlsci/rebar3_oscmd/actions
+[erlang-badge]: https://img.shields.io/badge/erlang-21%20to%2025-blue.svg
+[versions]: https://github.com/erlsci/rebar3_oscmd/blob/main/rebar.config
+[github-tags]: https://github.com/erlsci/rebar3_oscmd/tags
+[github-tags-badge]: https://img.shields.io/github/tag/erlsci/rebar3_oscmd.svg

@@ -18,7 +18,7 @@ jobs:
 
     strategy:
       matrix:
-        otp_version: ['26', '25', '24', '25', '26', '27']
+        otp_version: ['22', '23', '24', '25', '26', '27']
 
     steps:
     - uses: actions/checkout@v4
@@ -30,11 +30,5 @@ jobs:
       run: rebar3 compile
     - name: Xref Checks
       run: rebar3 xref
-    #- name: Dialyzer
-    #  run: rebar3 dialyzer
-    #- name: Proper Tests
-    #  run: rebar3 as test do compile, proper --regressions
-    #- name: Run Unit Tests
-    #  run: rebar3 as test lfe ltest -tall
     - name: Run Common Tests
       run: rebar3 ct -v
