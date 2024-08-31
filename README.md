@@ -1,10 +1,10 @@
-# rebar_cmd [![Build Status](https://github.com/gootik/rebar_cmd/workflows/build/badge.svg)](https://github.com/gootik/rebar_cmd) [![Hex.pm](https://img.shields.io/hexpm/v/rebar_cmd.svg)](https://hex.pm/packages/rebar_cmd)
+# rebar3_oscmd [![Build Status](https://github.com/gootik/rebar_cmd/workflows/build/badge.svg)](https://github.com/gootik/rebar_cmd) [![Hex.pm](https://img.shields.io/hexpm/v/rebar_cmd.svg)](https://hex.pm/packages/rebar_cmd)
 
-Run custom shell commands with `rebar3 cmd <command>`.
+Run custom shell commands with `rebar3 oscmd <command>`.
 
 ## Purpose
 
-The goal of this plugin is to allow `rebar3` to run additional commands, so
+The goal of this plugin is to allow `rebar3` to run additional commands via the system shell, so
 that one can use it solely to manage everything in an Erlang project.
 
 Whether it is bringing Docker containers up, tagging a new Git release or
@@ -22,7 +22,7 @@ Add the plugin to your `rebar.config`:
 
 ```erlang
     {plugins, [
-        {rebar_cmd, "0.2.6"}
+        {rebar3_oscmd, "0.4.1"}
     ]}.
 
     {commands, [
@@ -49,8 +49,8 @@ You could also get more info from the shell for the above command
 Check it out:
 
 ```bash
-$ rebar3 cmd sync
+$ rebar3 oscmd sync
 ===> Analyzing applications...
-===> Compiling rebar_cmd
+===> Compiling rebar3_oscmd
 ===> Command sync resulted in: "Already up to date."
 ```
