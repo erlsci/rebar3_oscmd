@@ -1,4 +1,4 @@
--module(rebar_cmd_prv).
+-module(r3_oscmd_prv).
 
 -export([
     init/1,
@@ -17,7 +17,7 @@
     {providers, create, 1}
 ]).
 
--define(PROVIDER, cmd).
+-define(PROVIDER, oscmd).
 -define(DEPS, [app_discovery]).
 -define(DEFAULT_OPT_TIMEOUT, 15000).
 -define(DEFAULT_OPT_VERBOSE, false).
@@ -44,10 +44,10 @@ init(State) ->
         {module, ?MODULE},
         {bare, true},
         {deps, ?DEPS},
-        {example, "rebar3 cmd <command>"},
+        {example, "rebar3 oscmd <command>"},
         {opts, []},
-        {short_desc, "A rebar3 plugin to run custom shell commands 'cmd <command>'."},
-        {desc, "A rebar3 plugin to run custom shell commands 'cmd <command>'"}
+        {short_desc, "A rebar3 plugin to run custom shell commands 'oscmd <shell command>'."},
+        {desc, "A rebar3 plugin to run custom shell commands 'oscmd <shell command>'"}
     ]),
     {ok, rebar_state:add_provider(State, Provider)}.
 

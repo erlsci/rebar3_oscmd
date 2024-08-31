@@ -14,7 +14,7 @@ deleting log files, you should be able to use a single build tool.
 
 This is a very simple and straightforward plugin. Simply describe your
 command in `rebar.config` and execute (just like you would Linux aliases)
-with `rebar3 cmd <command>`.
+with `rebar3 oscmd <command>`.
 
 ## Usage
 
@@ -22,7 +22,7 @@ Add the plugin to your `rebar.config`:
 
 ```erlang
     {plugins, [
-        {rebar3_oscmd, "0.4.1"}
+        {rebar3_oscmd, "0.5.0"}
     ]}.
 
     {commands, [
